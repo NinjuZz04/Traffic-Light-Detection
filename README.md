@@ -1,6 +1,6 @@
 # 🚦 Traffic Light Detection — ADAS Consensus System
 
-A real-time traffic light detection system that combines **YOLOv8 AI object detection** with **HSV color analysis** to verify and announce traffic light states. The two methods cross-check each other ("discuss") before confirming a result, reducing false detections.
+A real-time traffic light detection system that combines **YOLOv10 AI object detection** with **HSV color analysis** to verify and announce traffic light states. The two methods cross-check each other ("discuss") before confirming a result, reducing false detections.
 
 ---
 
@@ -9,7 +9,7 @@ A real-time traffic light detection system that combines **YOLOv8 AI object dete
 The system uses a dual-verification approach called **AI Discussion Mode**:
 
 ### 1. AI Detection (YOLO)
-A custom-trained YOLOv8 model (`Ai/Ai.pt`) scans each video frame to locate traffic lights and predict their color class:
+A custom-trained YOLOv10 model (`Ai/Ai.pt`) scans each video frame to locate traffic lights and predict their color class:
 - Class 0 → Green
 - Class 1 → Red
 - Class 2 → Yellow
@@ -47,7 +47,7 @@ Trafficlight_Detection/
 │   └── dectectlight.py        # Main application script
 │
 ├── Ai/
-│   └── Ai.pt                  # Custom YOLOv8 trained model
+│   └── Ai.pt                  # Custom YOLOv10 trained model
 │
 ├── image_status/
 │   ├── redlight.png
@@ -80,7 +80,7 @@ pip install ultralytics opencv-python pygame numpy
 
 | Library | Purpose |
 |---------|---------|
-| `ultralytics` | YOLOv8 model inference |
+| `ultralytics` | YOLOv10 model inference |
 | `opencv-python` | Video capture, HSV analysis, display |
 | `pygame` | Audio playback |
 | `numpy` | Image array operations |
