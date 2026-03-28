@@ -591,7 +591,3 @@ If using a virtual environment, make sure it is activated before running.
 - `SIMULATION_MODE` does not exist in this project. To test without a real road video, use any footage containing traffic lights.
 
 ---
-
-**Last Updated**: March 2026  
-**Project Status**: Active  
-**Tested On**: Python 3.10, Ubuntu 22.04 / Windows 11, YOLOv8n
