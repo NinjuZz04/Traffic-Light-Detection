@@ -15,7 +15,7 @@ SOUND_DIR = os.path.join(MAIN_DIR, "sound_status")
 
 # Pointing to the Ai and foottage folders inside the main directory
 MODEL_PATH = os.path.join(MAIN_DIR, "Ai/Ai.pt")
-VIDEO_PATH = os.path.join(MAIN_DIR, "foottage/testreal.mov")
+VIDEO_PATH = os.path.join(MAIN_DIR, "your_foottage_trafficlighr")
 
 # --- Setup ---
 pygame.mixer.init()
