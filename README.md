@@ -82,11 +82,11 @@ This system is designed as an **Advanced Driver Assistance System (ADAS)** modul
 ┌──────────────────────────────────────────────────────────────┐
 │                     OUTPUT ACTIONS                           │
 │                                                              │
-│   MATCH:    ● Green bbox  ● Update current_status           │
-│             ● Play .wav   ● Show status icon                │
+│   MATCH:    ● Green bbox  ● Update current_status            │
+│             ● Play .wav   ● Show status icon                 │
 │                                                              │
-│   CONFLICT: ● Red bbox    ● Show AI:x/HSV:y label           │
-│             ● No audio    ● Status unchanged                │
+│   CONFLICT: ● Red bbox    ● Show AI:x/HSV:y label            │
+│             ● No audio    ● Status unchanged                 │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -142,13 +142,13 @@ This step filters out false positives such as colored signboards, brake lights, 
 ├──────────────┬──────────────┬───────────────┬───────────────┤
 │  YOLO says   │  HSV says    │ Black housing │    Result     │
 ├──────────────┼──────────────┼───────────────┼───────────────┤
-│     red      │     red      │      ✅       │ ✅  MATCH     │
-│     green    │     green    │      ✅       │ ✅  MATCH     │
-│     yellow   │     yellow   │      ✅       │ ✅  MATCH     │
-│     red      │     green    │      ✅       │ ❌  CONFLICT  │
-│     green    │     red      │      ✅       │ ❌  CONFLICT  │
-│     any      │     any      │      ❌       │ ❌  CONFLICT  │
-│     any      │   unknown    │    either     │ ❌  CONFLICT  │
+│     red      │     red      │      ✅       │ ✅  MATCH    │
+│     green    │     green    │      ✅       │ ✅  MATCH    │
+│     yellow   │     yellow   │      ✅       │ ✅  MATCH    │
+│     red      │     green    │      ✅       │ ❌  CONFLICT │
+│     green    │     red      │      ✅       │ ❌  CONFLICT │
+│     any      │     any      │      ❌       │ ❌  CONFLICT │
+│     any      │   unknown    │    either     │ ❌  CONFLICT │
 └──────────────┴──────────────┴───────────────┴───────────────┘
 ```
 
